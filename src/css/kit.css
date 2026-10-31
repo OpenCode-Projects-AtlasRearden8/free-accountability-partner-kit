@@ -1,0 +1,157 @@
+/* Shared stylesheet for the Gentle Accountability Friendship Kit.
+   Print-first: sheets fit US Letter and A4, minimal ink, no branding. */
+
+@page {
+  size: Letter;
+  margin: 0.75in;
+}
+
+:root {
+  --ink: #2b2b2b;
+  --soft: #6b6259;
+  --accent: #4a6b57;
+  --line: #c9c2b8;
+  --wash: #f5f1ea;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  font-size: 11pt;
+  line-height: 1.45;
+  margin: 0;
+}
+
+header.sheet-head {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 20pt;
+  margin: 0 0 0.15rem 0;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 13pt;
+  margin: 1.1rem 0 0.35rem 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.15rem;
+}
+
+h3 { font-size: 11.5pt; margin: 0.8rem 0 0.25rem 0; }
+
+p, li { margin: 0.3rem 0; }
+
+.subtitle {
+  font-style: italic;
+  color: var(--soft);
+  margin: 0;
+}
+
+/* Kind usage notes: how to use this sheet gently. */
+.usage-notes {
+  background: var(--wash);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+  margin: 0 0 1rem 0;
+  font-size: 9.5pt;
+  color: var(--soft);
+}
+
+.usage-notes .label {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 8pt;
+  color: var(--accent);
+}
+
+ul, ol { padding-left: 1.3rem; }
+
+.script-line {
+  margin: 0.55rem 0;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--line);
+}
+
+.script-line em { color: var(--soft); }
+
+.fill-line {
+  display: block;
+  border-bottom: 1px solid var(--ink);
+  min-height: 1.35em;
+  margin: 0.35rem 0;
+}
+
+.blank-box {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-height: 3.2rem;
+  margin: 0.4rem 0;
+}
+
+.slip {
+  border: 1.5px dashed var(--accent);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.5rem 0;
+  page-break-inside: avoid;
+}
+
+.slip .promise {
+  border-bottom: 1px solid var(--ink);
+  min-height: 1.6em;
+  margin: 0.3rem 0 0.6rem 0;
+}
+
+.small { font-size: 9pt; color: var(--soft); }
+
+.check-grid { width: 100%; border-collapse: collapse; }
+.check-grid td, .check-grid th {
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.45rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 10pt;
+}
+.check-grid th { background: var(--wash); font-weight: bold; }
+.check-grid .box { width: 1.4em; text-align: center; }
+
+.postcard {
+  border: 1.5px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.5rem 0;
+  page-break-inside: avoid;
+}
+.postcard .prompt { font-style: italic; }
+.postcard .addr {
+  border-bottom: 1px solid var(--line);
+  min-height: 1.3em;
+  margin: 0.25rem 0;
+}
+
+.pagebreak { page-break-before: always; }
+
+footer.sheet-foot {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.3rem;
+  font-size: 8.5pt;
+  color: var(--soft);
+}
+
+.celebrate {
+  text-align: center;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.8rem 0;
+}
+.celebrate h2 { border: none; text-align: center; color: var(--accent); }
